@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Brendan Rohan | Strategy focused Product and Content Designer | AT&T Shoppers Profile</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind Config (minimal - layout utilities only) -->
+    <script>
+        tailwind.config = {
+            darkMode: ["selector", "[data-theme='dark']"],
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f35f5",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="flex items-center gap-2">
+                <span class="nav-logo-icon material-symbols-outlined">architecture</span>
+                <a href="index.html" class="nav-logo">
+                    mvp portfolio of brendan rohan
+                </a>
+            </div>
+
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+
+                <a class="btn btn-primary hidden md:inline-flex"
+                   href="https://docs.google.com/document/d/1jSbu9scsvpdFrB1LEYqvfuV2mvgeCqSoAZvcGw_S0Y8/preview"
+                   target="_blank">
+                    View Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container container-narrow py-12">
+
+        <!-- Hero Section -->
+        <section class="mb-16 reveal">
+            <p class="section-label">Case Study</p>
+            <h1 class="hero-title heading-display mb-6">
+                AT&T Shoppers Profile:
+                <span class="font-light italic">Personalizing the Retail Experience</span>
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-sm">
+                <div>
+                    <p class="text-secondary uppercase tracking-wider text-xs mb-2">Role</p>
+                    <p class="font-medium">Senior Experience Designer</p>
+                </div>
+                <div>
+                    <p class="text-secondary uppercase tracking-wider text-xs mb-2">Company</p>
+                    <p class="font-medium">AT&T</p>
+                </div>
+                <div>
+                    <p class="text-secondary uppercase tracking-wider text-xs mb-2">Timeline</p>
+                    <p class="font-medium">8 months</p>
+                </div>
+            </div>
+
+            <!-- Hero Image Placeholder -->
+            <div class="mt-12 bg-gray-200 rounded-xl aspect-video flex items-center justify-center" style="background-color: var(--color-bg-secondary);">
+                <div class="text-center">
+                    <p class="text-secondary text-sm">Image Placeholder</p>
+                    <p class="text-secondary text-xs opacity-60">1024 x 576</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="mb-20 reveal">
+            <h2 class="heading-2 heading-display mb-6">Overview</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-secondary leading-relaxed mb-4 text-lg">
+                    I led the design of AT&T's Shoppers Profile system, creating a unified customer data platform that enabled personalized retail experiences across in-store and digital touchpoints.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Challenge -->
+        <section class="mb-20 reveal">
+            <h2 class="heading-2 heading-display mb-6">The Challenge</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-secondary leading-relaxed mb-4 text-lg">
+                    AT&T retail associates lacked visibility into customer preferences, purchase history, and service interactions, leading to generic conversations and missed upsell opportunities.
+                </p>
+
+                <div class="my-8 card" style="border-left: 4px solid var(--color-accent); border-radius: var(--radius-lg);">
+                    <p class="text-xs uppercase tracking-wider text-secondary mb-3 font-bold">Key Metrics</p>
+                    <ul class="space-y-2 text-secondary">
+                        <li>• Metric placeholder 1</li>
+                        <li>• Metric placeholder 2</li>
+                        <li>• Metric placeholder 3</li>
+                        <li>• Metric placeholder 4</li>
+                    </ul>
+                </div>
+
+                <p class="text-secondary leading-relaxed mb-4 text-lg">
+                    <strong class="font-semibold" style="color: var(--color-text-primary)">Root Cause:</strong> Customer data was siloed across multiple systems, making it impossible for associates to quickly understand customer context and provide tailored recommendations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research and Discovery -->
+        <section class="mb-20 reveal">
+            <h2 class="heading-2 heading-display mb-6">Research and Discovery</h2>
+
+            <div class="mb-8">
+                <h3 class="heading-3 mb-3">What we did</h3>
+                <p class="text-secondary leading-relaxed mb-4 text-lg">
+                    We conducted field studies in AT&T retail stores and interviewed both associates and customers to understand pain points in the current shopping experience.
+                </p>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="heading-3 mb-3">What we learned</h3>
+                <p class="text-secondary leading-relaxed text-lg">
+                    <strong class="font-semibold" style="color: var(--color-text-primary)">Key insight 1:</strong> Description of first key learning from research
+                </p>
+                <p class="text-secondary leading-relaxed text-lg">
+                    <strong class="font-semibold" style="color: var(--color-text-primary)">Key insight 2:</strong> Description of second key learning from research
+                </p>
+                <p class="text-secondary leading-relaxed text-lg">
+                    <strong class="font-semibold" style="color: var(--color-text-primary)">Key insight 3:</strong> Description of third key learning from research
+                </p>
+                <p class="text-secondary leading-relaxed text-lg">
+                    <strong class="font-semibold" style="color: var(--color-text-primary)">Key insight 4:</strong> Description of fourth key learning from research
+                </p>
+            </div>
+
+            <!-- Side by Side Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="rounded-xl aspect-[4/3] flex items-center justify-center" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">512 x 384</p>
+                    </div>
+                </div>
+                <div class="rounded-xl aspect-[4/3] flex items-center justify-center" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">512 x 384</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Approach -->
+        <section class="mb-20 reveal">
+            <h2 class="heading-2 heading-display mb-6">Strategic Approach</h2>
+            <p class="text-secondary leading-relaxed mb-8 text-lg">
+                We designed a unified shopper profile that aggregated customer data from multiple sources and presented actionable insights to retail associates at the point of interaction.
+            </p>
+
+            <!-- Strategy Card 1 -->
+            <div class="mb-12">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-accent" style="background-color: rgba(15, 53, 245, 0.1);">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="heading-3 mb-2">Strategy Component 1</h3>
+                        <p class="text-secondary leading-relaxed text-lg">
+                            Description of the first strategic approach taken to solve the problem.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="rounded-xl aspect-video flex items-center justify-center mt-6" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Strategy 1 Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">1024 x 576</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 2 -->
+            <div class="mb-12">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-accent" style="background-color: rgba(15, 53, 245, 0.1);">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="heading-3 mb-2">Strategy Component 2</h3>
+                        <p class="text-secondary leading-relaxed text-lg">
+                            Description of the second strategic approach:
+                        </p>
+                        <ul class="mt-3 space-y-1 text-secondary text-lg">
+                            <li>• Sub-point 1</li>
+                            <li>• Sub-point 2</li>
+                            <li>• Sub-point 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="rounded-xl aspect-video flex items-center justify-center mt-6" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Strategy 2 Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">1024 x 576</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 3 -->
+            <div class="mb-12">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-accent" style="background-color: rgba(15, 53, 245, 0.1);">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="heading-3 mb-2">Strategy Component 3</h3>
+                        <p class="text-secondary leading-relaxed text-lg">
+                            Description of the third strategic approach.
+                        </p>
+                        <ul class="mt-3 space-y-1 text-secondary text-lg">
+                            <li>• Sub-point 1</li>
+                            <li>• Sub-point 2</li>
+                            <li>• Sub-point 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="rounded-xl aspect-video flex items-center justify-center mt-6" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Strategy 3 Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">1024 x 576</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy Card 4 -->
+            <div class="mb-12">
+                <div class="flex items-start gap-4 mb-4">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-accent" style="background-color: rgba(15, 53, 245, 0.1);">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="heading-3 mb-2">Strategy Component 4</h3>
+                        <p class="text-secondary leading-relaxed text-lg">
+                            Description of the fourth strategic approach.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Placeholder -->
+                <div class="rounded-xl aspect-video flex items-center justify-center mt-6" style="background-color: var(--color-bg-secondary);">
+                    <div class="text-center">
+                        <p class="text-secondary text-sm">Strategy 4 Image Placeholder</p>
+                        <p class="text-secondary text-xs opacity-60">1024 x 576</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Impact -->
+        <section class="mb-20 reveal">
+            <h2 class="heading-2 heading-display mb-6">The Impact</h2>
+
+            <p class="text-secondary leading-relaxed mb-6 text-lg">
+                <strong class="font-semibold" style="color: var(--color-text-primary)">Key outcome headline:</strong>
+            </p>
+
+            <div class="card mb-8" style="border-left: 4px solid var(--color-accent); border-radius: var(--radius-lg);">
+                <ul class="space-y-3 text-secondary text-lg">
+                    <li class="flex items-start gap-3">
+                        <span>• Impact metric 1</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span>• Impact metric 2</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span>• Impact metric 3</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-12">
+                <h3 class="heading-3 heading-display mb-4">Lessons Learned</h3>
+
+                <div class="space-y-6 text-secondary text-lg">
+                    <div>
+                        <p class="font-semibold mb-2" style="color: var(--color-text-primary)">Lesson 1 Title</p>
+                        <p class="leading-relaxed">
+                            Description of the first key lesson learned from this project.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="font-semibold mb-2" style="color: var(--color-text-primary)">Lesson 2 Title</p>
+                        <p class="leading-relaxed">
+                            Description of the second key lesson learned from this project.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="font-semibold mb-2" style="color: var(--color-text-primary)">Lesson 3 Title</p>
+                        <p class="leading-relaxed">
+                            Description of the third key lesson learned from this project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Case Study CTA -->
+        <section class="border-top pt-12 pb-20 reveal">
+            <a href="index.html#who" class="card-link" style="gap: 0.75rem;">
+                <svg class="w-6 h-6 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+                <span class="text-lg font-semibold">Back to selected projects</span>
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section border-top reveal" id="contact">
+            <p class="section-label">// Contact</p>
+            <div class="grid-contact">
+                <div class="space-y-6">
+                    <p class="contact-title">Let's build something meaningful together.</p>
+                    <div class="space-y-2">
+                        <a class="contact-link" href="mailto:brendanrohan@gmail.com">brendanrohan@gmail.com</a>
+                        <p class="contact-phone">(917) 318-1263</p>
+                    </div>
+                    <div class="social-links">
+                        <a class="social-link" href="https://linkedin.com/in/brendanrohan" target="_blank" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a class="social-link" href="https://github.com/brendanrohan" target="_blank" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-note">
+                    <span class="contact-note-icon material-symbols-outlined">info</span>
+                    <p>
+                        Please note: To comply with non-disclosure agreements, many of the project details shown here are generalized. Full case studies and high-fidelity artifacts are available during private discussions and portfolio reviews.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <p class="footer-text">© 2026 Brendan Rohan</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
