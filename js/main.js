@@ -1,88 +1,10 @@
 /**
  * Portfolio Landing Page - Main JavaScript
- * Modules: ThemeToggle, SmoothScroll, ScrollReveal, CardEffects
+ * Modules: SmoothScroll, ScrollReveal, CardEffects
  */
 
 (function() {
   'use strict';
-
-  // ============================================
-  // Theme Toggle Module
-  // ============================================
-  const ThemeToggle = {
-    STORAGE_KEY: 'theme-preference',
-
-    init() {
-      this.toggle = document.querySelector('[data-theme-toggle]');
-      this.html = document.documentElement;
-
-      // Get initial theme
-      const savedTheme = this.getSavedTheme();
-      const systemTheme = this.getSystemTheme();
-      const initialTheme = savedTheme || systemTheme;
-
-      // Apply initial theme
-      this.setTheme(initialTheme, false);
-
-      // Listen for toggle clicks
-      if (this.toggle) {
-        this.toggle.addEventListener('click', () => this.toggleTheme());
-      }
-
-      // Listen for system theme changes
-      this.watchSystemTheme();
-    },
-
-    getSavedTheme() {
-      try {
-        return localStorage.getItem(this.STORAGE_KEY);
-      } catch (e) {
-        return null;
-      }
-    },
-
-    getSystemTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
-      return 'light';
-    },
-
-    setTheme(theme, save = true) {
-      this.html.setAttribute('data-theme', theme);
-
-      if (save) {
-        try {
-          localStorage.setItem(this.STORAGE_KEY, theme);
-        } catch (e) {
-          // localStorage not available
-        }
-      }
-
-      // Update toggle button aria-label
-      if (this.toggle) {
-        const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-        this.toggle.setAttribute('aria-label', label);
-      }
-    },
-
-    toggleTheme() {
-      const currentTheme = this.html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      this.setTheme(newTheme);
-    },
-
-    watchSystemTheme() {
-      if (window.matchMedia) {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-          // Only respond to system changes if user hasn't set a preference
-          if (!this.getSavedTheme()) {
-            this.setTheme(e.matches ? 'dark' : 'light', false);
-          }
-        });
-      }
-    }
-  };
 
   // ============================================
   // Smooth Scroll Module
@@ -266,7 +188,6 @@
   // Initialize All Modules
   // ============================================
   function init() {
-    ThemeToggle.init();
     SmoothScroll.init();
     ScrollReveal.init();
     CardEffects.init();
