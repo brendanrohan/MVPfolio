@@ -203,3 +203,34 @@
   }
 
 })();
+
+// ============================================
+// Copy Email Function (global)
+// ============================================
+function copyEmail(button) {
+  const email = button.dataset.email;
+
+  navigator.clipboard.writeText(email).then(() => {
+    button.classList.add('copied');
+
+    // Reset after 2 seconds
+    setTimeout(() => {
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(() => {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+
+    button.classList.add('copied');
+    setTimeout(() => {
+      button.classList.remove('copied');
+    }, 2000);
+  });
+}
