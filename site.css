@@ -289,3 +289,7 @@ a { color: inherit; }
 @media (max-width: 720px) {
   .q-grid { grid-template-columns: 1fr; }
 }
+
+/* Process flow inline */
+.cs-flow { display: flex; align-items: center; gap: 16px; font-family: var(--mono); font-size: 14px; letter-spacing: 0.02em; color: var(--ink); margin: 0; padding: 18px 24px; background: oklch(0.965 0.006 80); border-radius: 8px; max-width: fit-content; }
+.cs-flow .flow-sep { color: var(--ink-faint); font-weight: 300; }
