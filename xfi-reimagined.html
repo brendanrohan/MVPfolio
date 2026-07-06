@@ -23,42 +23,193 @@
 
   <header class="cs-head">
     <div class="kick">(Comcast)</div>
-    <h1 class="cs-title">xFi, reimagined: WiFi management for when the network can talk back</h1>
-    <p class="cs-lead">A speculative redesign of Comcast's xFi exploring <span class="o">conversational and voice-first</span> control of the home network.</p>
-    <div class="cs-wip">Case study in progress — full write-up coming soon</div>
+    <h1 class="cs-title">xFi, reimagined: What WiFi management looks like when the network can talk back</h1>
+    <p class="cs-lead" style="max-width: 900px;">A speculative redesign of Comcast's xFi exploring <span class="o">conversational and voice-first</span> home network controls.</p>
 
     <div class="cs-meta">
-      <div><div class="k">Role</div><div class="v">Product Designer</div></div>
-      <div><div class="k">Duration</div><div class="v">2016 — 2018</div></div>
-      <div><div class="k">Year</div><div class="v">2018</div></div>
-      <div><div class="k">Tags</div><div class="v tags"><span>Voice UI</span><span>Conversational</span><span>Mobile</span></div></div>
+      <div><div class="k">Role</div><div class="v">Solo/Concept</div></div>
+      <div><div class="k">Duration</div><div class="v">Speculative redesign</div></div>
+      <div><div class="k">Year</div><div class="v">2026</div></div>
+      <div><div class="k">Tags</div><div class="v tags"><span>Conversational UI</span><span>Agentic Systems</span><span>Voice UI</span><span>Mobile</span></spaan></div></div>
     </div>
   </header>
 
   <section class="cs-sec">
-    <div class="kick">(Overview)</div>
-    <p>Building on work taking the xFi WiFi management app from launch to 10M+ users, this concept reimagines profile management and device control through a conversational, voice-first interface.</p>
-    <p>The full case study is being written up. The structure below is ready for that content and imagery.</p>
+    <div class="kick">(Disclosure)</div>
+    <p>I was a designer on the original xFi launch (2016–2018). This case study is a personal speculative exercise built in 2026 — a reframe of that
+       product if I were starting it today, when conversational AI and agentic systems are viable in ways they weren't a decade ago. 
+       Nothing here represents Comcast's current roadmap or my work for them.</p>
   </section>
 
   <section class="cs-sec">
-    <div class="kick">(Selected Visuals)</div>
-    <div class="cs-fig tall">
-      <image-slot id="xfi-hero" placeholder="Drop: concept hero / key screen"></image-slot>
-      <figcaption>Placeholder — drop a key concept frame here.</figcaption>
-    </div>
-    <div class="cs-fig screens">
-      <image-slot id="xfi-screens" placeholder="Drop: product screens"></image-slot>
-      <figcaption>Placeholder — drop product screens here.</figcaption>
-    </div>
+    <div class="kick">(2017 Project Overview)</div>
+    <p>Xfinity xFi is an experience from Comcast that allows customers to manage their home WiFi network. Customers can set up and customize their
+       home WiFi network, create guest networks, set parental controls, monitor devices, set routines with connected devices, and troubleshoot
+       connectivity issues. I joined the xFi team in 2016 in the NYC Comcast design studio to build the v1 of the xFi app and web experiences.</p>
+       <p> We launched in mid 2017 and quickly amassed 10+ million users based on our pairing with the latest gateway (modem + rputer) from xFinity.
+        The launch included the ability to troubleshoot WiFI connections, name devices, assign devices to individuals and manage their connection
+        to WiFi. Eventually more features were added such as parental controls, guest WiFi and conversational controls.</p>
   </section>
 
-  <nav class="cs-pager">
-    <a class="prev" href="number-transfer-redesign.html">
+  <hr style="border: none; border-top: 1px solid var(--line); margin: 72px 0;">
+
+  <section class="cs-sec">
+    <div class="kick">(Premise)</div>
+    <p>The 2017 xFi team got one thing fundamentally correct. We built an app for people, not network administrators.  Early versions we tested with
+      users showed they didn’t want to sort through technical details (such as signal strength, bandwidth per device, channel utilization).
+      They wanted to be informed on what was happening with their WiFi in non-technical language and be guided to take corrective actions.</p>
+       <p> We gathered network signals and then translated it to the user in non-technical language. But what if an agentic layer could be placed
+         between the user and the network with the ability to explain and interact with the customer when needed? </p>
+      <p>The interface then becomes a conversation with a system that’s already handling the work. The app still exists but recedes into the 
+        background, available when wanted but rarely necessary. </p>   
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Reframe)</div>
+    <p>The original product and a speculative version side by side. Instead of requiring an action by the user, the agent can take action in the
+      background.</p>
+    <table class="cs-compare">
+      <thead>
+        <tr>
+          <th>User Action</th>
+          <th>2017 xFi</th>
+          <th>2026 "Agentic" xFi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"The kids' internet is slow"</td>
+          <td>Open app › find device › check signal › guess at fix</td>
+          <td>"Why is Maya's iPad slow?" › app explains, offers one-tap fix</td>
+        </tr>
+        <tr>
+          <td>Bedtime cutoff</td>
+          <td>Set up profile › assign devices › configure schedule</td>
+          <td>"Pause Maya's devices at 9pm on school nights" › done; show me</td>
+        </tr>
+        <tr>
+          <td>Unknown device on network</td>
+          <td>List of MAC addresses, user identifies manually</td>
+          <td>Agent flags it, suggests likely identity, asks one yes/no</td>
+        </tr>
+        <tr>
+          <td>Network feels broken</td>
+          <td>Run speed test › restart router › call support</td>
+          <td>Agent has already noticed, attempted fix, can explain what it tried</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Speculative System Architecture)</div>
+  <p>The product splits into a conversational layer that the user interacts with, and an agentic layer doing the actual work. </p>
+
+    <div class="cs-layers">
+      <div class="layer">
+        <div class="layer-head">User</div>
+        <div class="layer-body">Ask questions, sets intent ("keep kids off at dinner"), reviews what action agents take</div>
+      </div>
+      <div class="layer">
+        <div class="layer-head">Conversational Layer</div>
+        <div class="layer-body">Translates users language into agent and network actions and explains network technical states back into everyday language. The product voice. Always available. Not autonomous</div>
+      </div>
+      <div class="layer">
+        <div class="layer-head">Agentic Layer</div>
+        <div class="layer-body">Continously monitors network health, performs known-safe fixes (channel switching, device re-prioritization, parental schedule enforcement), surfaces anything that might require human judgement.</div>
+      </div>
+      <div class="layer">
+        <div class="layer-head">Network and Devices</div>
+        <div class="layer-body">The hardware: router, connected devices, signal data. Unchanged since 2017 just moves the intelligence up the stack.</div>
+      </div>
+    </div>
+    <p></p>
+<p> The seam between conversational and agentic layers is where most of the interesting design questions live. What is the agent allowed to do without
+  asking? What requires a human “yes”? How does the conversation reference work the agent did silently? </p>
+
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Conversation Design)</div>
+    <p>This was my second crack and a conversational interface for xFi. When we explored how to do this in the original product we settled on mostly
+      following the structure and conventions of the interface. The degree of intelligence to understand the user was limited.</p>
+       <p> For this version, wanted to get the tone right. While the original had a brand voice and micro-copy it didn’t have a voice for responses
+        that couldn’t be anticipated. </p>
+<p><b>Voice Principles</b></p>
+      <p><b>Plain over precise:</b>  When the agent did something, say what and why in one sentence. Don’t narrate every step. Most users will read the
+        summary and trust it; those who want detail can ask. </p>
+      <p><b>Show its work without performing it:</b> “Your network’s been a little slow tonight” instead “2.4 GHz utilization at 78%.” Technical detail is available
+        on request, never the default. </p>
+      <p><b>Comfortable with uncertainy:</b>. "Probably a Roku — your downstairs TV" reads better than confidently misidentifying a device. The product
+      gains trust by being honest about what it doesn't know. </p>
+
+    <div class="cs-fig" style="max-width: 680px;">
+      <img src="_images/xfi_converstational_design_screen.png" alt="xFi conversational design concept showing a chat interface for troubleshooting slow WiFi" />
+    </div>
+   <p></p><p>The annotations under each response aren’t user-facing — they’re a way of being explicit, as a designer, about what each turn is doing
+     structurally. Every assistant turn is doing some combination of: diagnosing, suggesting, acting, asking, or warning. Naming those moves makes
+    them designable.</p>
+
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">What decisions is the agent empowered to make?</div>
+    <p style="border-left: 3px solid var(--accent); padding-left: 20px; margin-left: 0;">How might we best build trust and confidence between the user and the agent.</p>
+<div class="q-grid">
+      <div class="q-card">
+        <div class="q-label">Q1 · Autonomy</div>
+        <div class="q-title">What can the agent do silently?</div>
+        <p>My take: reversible, low-cost optimizations (channel switching, QoS adjustment) happen silently with a passive log. Anything that affects another household member's experience (pausing a device, changing a schedule) requires confirmation.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-label">Q2 · Failure Cost</div>
+        <div class="q-title">What does a wrong action cost?</div>
+        <p>A bad channel switch costs 30 seconds of poor signal. A wrongly paused work laptop during a video call costs trust. The autonomy boundary should be drawn around that asymmetry, not around technical complexity.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-label">Q3 · Memory</div>
+        <div class="q-title">How much should it remember?</div>
+        <p>Schedules and named devices, yes. Conversation history, lightly — enough to handle "do that again" without becoming a surveillance archive. Default retention should be short and visible.</p>
+      </div>
+      <div class="q-card">
+        <div class="q-label">Q4 · Escalation</div>
+        <div class="q-title">When does it stop trying and call a human?</div>
+        <p>Three failed self-repair attempts on the same issue → agent stops and offers human support. The product's credibility depends on knowing when it's out of its depth.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <hr style="border: none; border-top: 1px solid var(--line); margin: 72px 0;">
+
+<section class="cs-sec">
+    <div class="kick">What I'd Want to Test</div>
+    <p>The interesting research questions for this kind of product are not about discoverability or task success. They’re about trust over time.
+      A few tests I’d be curious to run:</p>
+      <ul class="cs-learn">
+       <li><b>Does the voice stay credible after a wrong call?</b> If the agent misdiagnoses once, do users continue to engage conversationally, or do they retreat to manual controls? Measured over weeks, not sessions.</li>
+       <li><b>Does silent action become invisible — or distrusted?</b> If the agent fixes things quietly, do users stop believing it's doing anything? Some amount of visible work may be necessary even when it's not technically needed.</li>
+       <li><b>What's the "I just want a button" threshold?</b> Identify the tasks where conversation is friction, not feature. Bedtime mode might be one. Guest network setup might not be.</li>
+      </ul>
+    
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">Scope</div>
+    <p>This is a thinking document, not a complete design. I haven’t built screens for every state, run usability tests, or validated the agent’s 
+      autonomy boundaries with real users. What’s here is the part I find most worth working through: the architectural and product decisions
+      that come before the screens.</p>
+    <p>If I were doing this for real, the next phase would be exactly that — pressure-testing the autonomy model with five to ten households over
+       a month, watching where trust forms and where it breaks, then designing the screens around what survives.</p>
+    
+  </section>
+
+<nav class="cs-pager">
+    <a class="prev" href="personalized-shopping.html">
       <span class="dir">← Previous</span>
-      <span class="pname">Omnichannel Service</span>
+      <span class="pname">Personalized Shopping</span>
     </a>
-    <a class="next" href="quiet-signals.html">
+    <a class="next" href=".html">
       <span class="dir">Next →</span>
       <span class="pname">Quiet Signals</span>
     </a>
