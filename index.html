@@ -1,436 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Brendan Rohan | Strategy focused Product and Content Designer | MVP Portfolio</title>
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
-
-    <!-- Tailwind Config (minimal - layout utilities only) -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0f35f5",
-                    },
-                    fontFamily: {
-                        "display": ["Playfair Display", "serif"],
-                        "body": ["Inter", "sans-serif"]
-                    },
-                },
-            },
-        }
-    </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brendan Rohan — UX Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<script src="image-slot.js"></script>
 </head>
 <body>
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<template id="__bundler_thumbnail" data-bg-color="#f5f3ee">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f5f3ee"/>
+    <text x="120" y="360" font-family="Georgia, serif" font-size="150" font-weight="600" fill="#2b2825">BR</text>
+    <rect x="120" y="430" width="520" height="10" rx="5" fill="#c9634a"/>
+    <text x="120" y="520" font-family="monospace" font-size="34" letter-spacing="6" fill="#8a857c">PORTFOLIO</text>
+  </svg>
+</template>
+<div class="wrap" data-screen-label="Work / Home">
 
-        <!-- Header / Navigation -->
-        <header class="nav">
-            <div class="nav-inner">
-                <a href="index.html" class="nav-logo">bR</a>
-
-                <nav class="nav-links">
-                    <a class="nav-link" href="#who">Work</a>
-                    <span class="nav-divider">|</span>
-                    <a class="nav-link" href="#introduction">About</a>
-                    <span class="nav-divider">|</span>
-                    <a class="btn btn-primary" href="https://docs.google.com/document/d/1jSbu9scsvpdFrB1LEYqvfuV2mvgeCqSoAZvcGw_S0Y8/preview" target="_blank">
-                        Resume
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="container container-narrow py-12 space-y-16">
-
-            <!-- Section 1: Introduction / Hero -->
-            <section class="reveal pt-8" id="introduction">
-                <p class="section-label">/ Introduction</p>
-                <div class="hero-intro">
-                    <h1 class="hero-title heading-display">
-                        Hi, I'm Brendan. <br>
-                        <span class="italic font-light">I help organizations</span> turn emerging technology
-                        <span class="highlight-gradient font-bold">
-                    into experiences people actually use.
-                        </span>
-                    </h1>
-                    <p class="hero-subtitle mb-6">
-                        I've spent 15 years figuring out <strong>what new technology means for the people who use it</strong>,
-                        and for the organizations that need to deliver it. 
-                        
-                    </p>
-                    <p class="hero-tech">
-                        <em class="tech-highlight">Digital wallets.Voice interfaces. Omnichannel Architecture. Generative AI.</em><br>
-                      I've spent my career one step ahead of where experience design was going.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Section 2: Skills (The What) -->
-            <section id="what" class="reveal">
-                <p class="section-label">/ Approach</p>
-                <div class="grid-skills stagger-children">
-
-                    <!-- Forward Looking Card -->
-                    <div class="card card-skill group">
-                        <!-- Custom SVG Icon -->
-                        <div class="card-icon">
-                            <svg class="w-20 h-20 text-blue-600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Rocket body -->
-                                <path d="M50 20 L45 50 L55 50 Z" stroke="currentColor" stroke-width="2.5" fill="currentColor" opacity="0.3"/>
-                                <ellipse cx="50" cy="30" rx="5" ry="8" fill="currentColor"/>
-                                <!-- Flames -->
-                                <path d="M45 50 L40 65 L45 60 L50 70 L55 60 L60 65 L55 50" fill="currentColor" opacity="0.5"/>
-                                <!-- Stars -->
-                                <circle cx="30" cy="25" r="2" fill="currentColor"/>
-                                <circle cx="70" cy="30" r="2" fill="currentColor"/>
-                                <circle cx="75" cy="50" r="2" fill="currentColor"/>
-                            </svg>
-                        </div>
-
-                        <h3 class="card-title">
-                            <span class="font-light">Early adopter,</span>
-                            <span class="font-bold italic">not a follower</span>
-                        </h3>
-                        <p class="card-description">
-                            I've built for voice, mobile, and AI before they were trends. Curiosity about what's coming
-                            <span class="font-medium" style="color: var(--color-text-primary)">next</span> isn't a side interest — it's how I've always worked.
-                        </p>
-                    </div>
-
-                    <!-- Systems Thinker Card -->
-                    <div class="card card-skill group">
-                        <!-- Custom SVG Icon -->
-                        <div class="card-icon">
-                            <svg class="w-20 h-20 text-purple-600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Interlocking puzzle pieces -->
-                                <rect x="20" y="20" width="30" height="30" stroke="currentColor" stroke-width="2.5" fill="none" rx="3"/>
-                                <rect x="50" y="20" width="30" height="30" stroke="currentColor" stroke-width="2.5" fill="none" rx="3"/>
-                                <rect x="20" y="50" width="30" height="30" stroke="currentColor" stroke-width="2.5" fill="none" rx="3"/>
-                                <rect x="50" y="50" width="30" height="30" stroke="currentColor" stroke-width="2.5" fill="none" rx="3"/>
-                                <!-- Connection points -->
-                                <circle cx="50" cy="35" r="4" fill="currentColor"/>
-                                <circle cx="35" cy="50" r="4" fill="currentColor"/>
-                                <circle cx="65" cy="50" r="4" fill="currentColor"/>
-                                <circle cx="50" cy="65" r="4" fill="currentColor"/>
-                            </svg>
-                        </div>
-
-                        <h3 class="card-title">
-                            <span class="font-light">The whole system,</span>
-                            <span class="font-bold italic">not just the screen</span>
-                        </h3>
-                        <p class="card-description">
-                            Changes to one touchpoint can affect everything. 
-                            I map those <span class="font-medium" style="color: var(--color-text-primary)">connections</span> first, so design decisions account for what happens downstream.
-                        </p>
-                    </div>
-
-                    <!-- Collaborator Card -->
-                    <div class="card card-skill group">
-                        <!-- Custom SVG Icon -->
-                        <div class="card-icon">
-                            <svg class="w-20 h-20 text-orange-600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Team collaboration icon -->
-                                <!-- Person 1 -->
-                                <circle cx="35" cy="35" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <path d="M25 55 Q35 50 45 55" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <!-- Person 2 -->
-                                <circle cx="65" cy="35" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <path d="M55 55 Q65 50 75 55" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <!-- Person 3 (center bottom) -->
-                                <circle cx="50" cy="60" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                                <path d="M40 80 Q50 75 60 80" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                                <!-- Connecting lines -->
-                                <path d="M42 42 L58 42" stroke="currentColor" stroke-width="2" opacity="0.3" stroke-dasharray="3 3"/>
-                                <path d="M38 48 L46 58" stroke="currentColor" stroke-width="2" opacity="0.3" stroke-dasharray="3 3"/>
-                                <path d="M62 48 L54 58" stroke="currentColor" stroke-width="2" opacity="0.3" stroke-dasharray="3 3"/>
-                                <!-- Center sparkle -->
-                                <circle cx="50" cy="45" r="3" fill="currentColor" opacity="0.5"/>
-                            </svg>
-                        </div>
-
-                        <h3 class="card-title">
-                            <span class="font-light">Translation is the real</span>
-                            <span class="font-bold italic">skill</span>
-                        </h3>
-                        <p class="card-description">
-                            The hardest part of enterprise design isn't the interface — 
-                            it's getting researchers, engineers, product owners, and business leads to a shared understanding of
-                             <span class="font-medium" style="color: var(--color-text-primary)">what to build. </span>
-                            That's where I add the most value.
-                            
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 3: Experience (The Who) -->
-            <section id="who" class="reveal">
-                <p class="section-label">/ Experience</p>
-
-                <div class="grid-experience stagger-children">
-
-                    <!-- AT&T Card -->
-                    <div class="card card-experience" data-accent="blue">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <div class="card-logo">
-                                    <img src="images/att.logo.png" alt="AT&T Logo"/>
-                                </div>
-                                <span class="card-badge text-blue-700" style="background-color: rgba(59, 130, 246, 0.1);">2022-2025</span>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-3xl md:text-4xl heading-display font-bold mb-2">AT&T</h3>
-                                <p class="text-lg font-semibold text-blue-600 mb-2">Design Strategist</p>
-                                <p class="text-sm text-secondary italic">Customer Experience Group</p>
-                            </div>
-
-                            <p class="text-secondary mb-6 leading-relaxed">
-                                Identified opportunities throughout the customer experience to
-                                <span class="font-medium" style="color: var(--color-text-primary)">mix business imperatives</span>
-                                with a user-centered approach.
-                            </p>
-
-                            <!-- Projects -->
-                            <div class="mb-8">
-                                <p class="text-xs uppercase tracking-wider text-secondary mb-3 font-bold">Key Projects</p>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        <span>Shopper's Profile</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        <span>Split Pay</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                        <span>Fiber CI</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="card-link mt-auto" href="index.html">
-                            <span>View Case Study</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Verizon Card -->
-                    <div class="card card-experience" data-accent="red">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <div class="card-logo">
-                                    <img src="images/verizon-logo.png" alt="Verizon Logo"/>
-                                </div>
-                                <span class="card-badge text-red-700" style="background-color: rgba(239, 68, 68, 0.1);">2019-2021</span>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-3xl md:text-4xl heading-display font-bold mb-2">Verizon</h3>
-                                <p class="text-lg font-semibold text-red-600 mb-2">Experience Designer</p>
-                                <p class="text-sm text-secondary italic">Service and Support Team</p>
-                            </div>
-
-                            <p class="text-secondary mb-6 leading-relaxed">
-                                Conceived and built
-                                <span class="font-medium" style="color: var(--color-text-primary)">omnichannel service experiences</span>
-                                making the process easier and more secure for
-                                <span class="font-medium text-red-600">100M+ customers</span>.
-                            </p>
-
-                            <!-- Projects -->
-                            <div class="mb-8">
-                                <p class="text-xs uppercase tracking-wider text-secondary mb-3 font-bold">Key Projects</p>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                        <span>Number Transfer</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                        <span>Port Out Security</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                        <span>Chat/Search Integration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="card-link mt-auto" style="color: #DC2626;" a href="index.html"
-                            <span>View Case Study</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Comcast Card -->
-                    <div class="card card-experience" data-accent="indigo">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <div class="card-logo">
-                                    <img src="images/xfinity-logo.png" alt="Comcast Xfinity Logo"/>
-                                </div>
-                                <span class="card-badge text-indigo-700" style="background-color: rgba(99, 102, 241, 0.1);">2016-2018</span>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-3xl md:text-4xl heading-display font-bold mb-2">Comcast</h3>
-                                <p class="text-lg font-semibold text-indigo-600 mb-2">UX Designer</p>
-                                <p class="text-sm text-secondary italic">xFi Product Group</p>
-                            </div>
-
-                            <p class="text-secondary mb-6 leading-relaxed">
-                                Worked on xFi WiFi management app from launch to
-                                <span class="font-medium text-indigo-600">10M+ users</span>.
-                                Developed key features including
-                                <span class="font-medium" style="color: var(--color-text-primary)">profile management</span>
-                                and conversational UI.
-                            </p>
-
-                            <!-- Projects -->
-                            <div class="mb-8">
-                                <p class="text-xs uppercase tracking-wider text-secondary mb-3 font-bold">Key Projects</p>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-                                        <span>Profiles & Devices</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-                                        <span>Conversational/Voice UI</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a class="card-link mt-auto" style="color: #4F46E5;" href="index.html"
-                            <span>View Case Study</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Publicis/Razorfish Card -->
-                    <div class="card card-experience" data-accent="orange">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <div class="card-logo">
-                                    <img src="images/publicis-groupe.png" alt="Publicis Logo"/>
-                                </div>
-                                <span class="card-badge text-orange-700" style="background-color: rgba(249, 115, 22, 0.1);">2014-2016</span>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-3xl md:text-4xl heading-display font-bold mb-2">Publicis</h3>
-                                <p class="text-lg font-semibold text-orange-600 mb-2">Information Architect</p>
-                                <p class="text-sm text-secondary italic">Razorfish / JPMorgan Chase</p>
-                            </div>
-
-                            <p class="text-secondary mb-6 leading-relaxed">
-                                Part of dedicated agency for
-                                <span class="font-medium" style="color: var(--color-text-primary)">JPMorgan Chase digital initiatives</span>.
-                                Launched early prototypes for
-                                <span class="font-medium text-orange-600">digital wallets and mobile payments</span>.
-                            </p>
-
-                            <!-- Projects -->
-                            <div class="mb-8">
-                                <p class="text-xs uppercase tracking-wider text-secondary mb-3 font-bold">Key Projects</p>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-                                        <span>Freedom Points App</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-                                        <span>Chase Wallet Prototype</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-sm font-medium text-secondary">
-                                        <div class="w-2 h-2 rounded-full bg-orange-500"></div>
-                                        <span>Mobile Marketplace</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <a class="card-link mt-auto" style="color: #EA580C;" href="#">
-                            <span>View Case Study</span>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a> -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 4: Contact -->
-            <section class="border-top pt-16 reveal" id="contact">
-                <p class="section-label">/ Contact</p>
-                <div class="grid-contact">
-                    <div class="space-y-6">
-                        <p class="contact-title">Working on something complex? Let's think through it together.</p>
-                        <div class="space-y-2">
-                            <a class="contact-link" href="mailto:brendanrohan@gmail.com">brendanrohan@gmail.com</a>
-                            <p class="contact-phone">(917) 318-1263</p>
-                        </div>
-                        <div class="social-links">
-                            <a class="social-link" href="https://linkedin.com/in/brendanrohan" target="_blank" aria-label="LinkedIn">
-                                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a class="social-link" href="https://github.com/brendanrohan" target="_blank" aria-label="GitHub">
-                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                            <a class="social-link" href="https://substack.com/@brohanyc" target="_blank" aria-label="Substack">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path d="M22.539 8.242H1.46V5.406h21.08zM1.46 10.812V24L12 18.11L22.54 24V10.812zM22.54 0H1.46v2.836h21.08z"/>
-</svg>
-
-                        </div>
-                    </div>
-                    <div class="contact-note">
-                        <span class="contact-note-icon material-symbols-outlined">info</span>
-                        <p>
-                            All content on this site is confidential and shared only with prospective employers. By visiting this website you agree not to share, publish or disclose any content on this site.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer container">
-            <p class="footer-text">© 2026 Brendan Rohan</p>
-        </footer>
-
+  <nav class="nav">
+    <a class="nm" href="index.html">Brendan Rohan</a>
+    <div class="nav-loc">New York, NY <span class="sep">·</span> <span id="local-time">—</span></div>
+    <div class="links">
+      <a href="index.html" class="active">Work</a>
+      <a href="about.html">About</a>
     </div>
+  </nav>
 
-    <!-- External JavaScript -->
-    <script src="js/main.js"></script>
+  <header class="hero">
+    <div class="kick">(Introduction)</div>
+    <h1 class="intro">I help organizations turn <em>emerging technology</em> into experiences people <span class="o">actually use</span>.</h1>
+    <p class="sub">I bring systems thinking, storytelling, product strategy, and a sense for what resonates — plus a relentless curiosity about what people really want.</p>
+    <div class="hero-links">
+      <a href="mailto:brendanrohan@gmail.com">Contact</a>
+      <a href="https://drive.google.com/file/d/1ccV1od5KwEUAi4rZOvOOX8fiUHjJwAA_/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="kick">(Selected Work)</div>
+    <div class="worklist">
+      <a class="work-card" href="quiet-signals.html">
+        <div class="wc-visual"><image-slot id="work-1" shape="rect" placeholder="Add visual"></image-slot></div>
+        <div class="wc-body">
+          <div class="wc-meta"><span class="ix">01</span><span class="yr">Personal</span></div>
+          <div class="nm2">Quiet Signals</div>
+          <div class="ds">A caregiver companion that doesn't feel like surveillance.</div>
+        </div>
+      </a>
+      <a class="work-card" href="personalized-shopping.html">
+        <div class="wc-visual"><image src="_images/hp_att_ShoppersProfile.png" alt="AT&T Personalized Shopping"></div>
+        <div class="wc-body">
+          <div class="wc-meta"><span class="ix">02</span><span class="yr">AT&amp;T</span></div>
+          <div class="nm2">A Personalized Shopping Experience</div>
+          <div class="ds">Intent + data reshaping how people buy phones and plans.</div>
+        </div>
+      </a>
+      <a class="work-card" href="number-transfer-redesign.html">
+        <div class="wc-visual"><image src="_images/hp_vz_NumberTransfer.png" alt="Verizon Number Transfer Omnichannel"></div>
+        <div class="wc-body">
+          <div class="wc-meta"><span class="ix">03</span><span class="yr">Verizon</span></div>
+          <div class="nm2">Number Transfers</div>
+          <div class="ds">A fragmented support process made transparent end to end across retail, digital and service channels.</div>
+        </div>
+      </a>
+      <a class="work-card" href="xfi-reimagined.html">
+        <div class="wc-visual"><img src="_images/hp_xfi_ConversationalDesign.png" alt="xFi conversational design concept"></div>
+        <div class="wc-body">
+          <div class="wc-meta"><span class="ix">04</span><span class="yr">Comcast</span></div>
+          <div class="nm2">xFi, reimagined</div>
+          <div class="ds">WiFi management for when the network can talk back.</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-lead">
+      <div class="kick">(Contact)</div>
+      <p class="big">Working on something complex? <br> Let's think it through together.</p>
+    </div>
+    <div class="contact">
+      <a href="mailto:brendanrohan@gmail.com">brendanrohan@gmail.com</a><br />
+      (917) 318-1263<br />
+      <a href="https://www.linkedin.com/in/brendanrohan" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    const el = document.getElementById('local-time');
+    function tick() {
+      el.textContent = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit'
+      }).format(new Date()).toLowerCase();
+    }
+    tick();
+    setInterval(tick, 15000);
+  })();
+</script>
+
 </body>
 </html>

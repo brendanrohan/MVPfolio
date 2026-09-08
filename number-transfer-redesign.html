@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Number Transfer Redesign — Brendan Rohan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,300..700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+<div class="wrap" data-screen-label="Case Study — Number Transfer">
+
+  <nav class="nav">
+    <a class="nm" href="index.html">Brendan Rohan</a>
+    <div class="links">
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <header class="cs-head">
+    <div class="kick">(Verizon)</div>
+    <h1 class="cs-title">Number Transfer Redesign: Reducing Customer Friction Across Channels</h1>
+    <p class="cs-lead">Redesigned the mobile number transfer experience to reduce a 33% fallout rate, resulting in <span class="o">1.5M fewer failed transfers</span> annually.</p>
+
+    <div class="cs-meta">
+      <div><div class="k">Role</div><div class="v">Sr. Experience Designer</div></div>
+      <div><div class="k">Duration</div><div class="v">6 months</div></div>
+      <div><div class="k">Year</div><div class="v">2022</div></div>
+      <div><div class="k">Tags</div><div class="v tags"><span>UX Design</span><span>Service Design</span><span>Omnichannel</span><span>Research</span></div></div>
+    </div>
+  </header>
+
+  <section class="cs-sec">
+    <div class="kick">(Overview)</div>
+    <p>When customers transferred their mobile numbers to Verizon, 33% experienced "fallout" — failures that require manual intervention by customer service representatives. This created significant operational costs and often a poor first service experience for new customers.</p>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Challenge)</div>
+    <p>In addition to the third of customers who experienced fallout, a small but significant number didn't have or know the account numbers and PINs required from their old carrier. With no visibility into transfer status and no way to self-correct, customers were forced to troubleshoot on their own — bouncing between retail stores, websites, and customer service.</p>
+
+    <h3 class="cs-subh">Key Metrics</h3>
+    <div class="cs-metrics">
+      <div class="row head"><div class="m">Metric</div><div class="val">Value</div></div>
+      <div class="row"><div class="m">Annual ports</div><div class="val">9.4M</div></div>
+      <div class="row"><div class="m">Monthly customer service calls</div><div class="val">314K · 4% of all Verizon calls</div></div>
+      <div class="row"><div class="m">Transfers initiated in retail stores</div><div class="val">75%</div></div>
+      <div class="row"><div class="m">Fallout rate requiring manual resolution</div><div class="val">33%</div></div>
+    </div>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Research)</div>
+    <p>We conducted user interviews and collaborated with product managers to create a comprehensive service blueprint mapping the end-to-end porting journey across all touchpoints.</p>
+
+    <div class="cs-fig">
+      <img src="_images/vz-user-research.jpg" alt="Customer journey map across Search+Learn, Shop+Buy, Wait for Transfer, and Transfer Complete stages, with channels, thoughts/feelings, pain points, and opportunities captured on sticky notes." />
+      <figcaption>Research synthesis — a journey map of the porting experience across stages, capturing customer actions, thoughts, pain points, and opportunities.</figcaption>
+    </div>
+    <div class="cs-fig">
+      <img src="_images/vz-service-blueprint.jpg" alt="Service blueprint mapping customer actions and port-process steps against front-stage channels (retail, web, SMS, IVR, chat, email) and backstage teams (LNP center, ACSS, POS)." />
+      <figcaption>Service blueprint documenting the full porting journey across every front-stage channel and backstage team — the foundation for the redesign.</figcaption>
+    </div>
+
+    <h3 class="cs-subh">What we learned</h3>
+    <ul class="cs-learn">
+      <li><b>Channel confusion</b> — customers bounced between retail, web, and phone with inconsistent messaging at each touchpoint.</li>
+      <li><b>Information opacity</b> — the transfer process felt like a "black box" with no visibility into status or next steps.</li>
+      <li><b>Messaging chaos</b> — dozens of error messages with conflicting language and unclear action items.</li>
+      <li><b>System fragmentation</b> — legacy backend systems across retail, IVR, and digital channels didn't communicate effectively.</li>
+    </ul>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Approach)</div>
+    <p>Rather than rebuild legacy systems, we designed a unified customer experience layer that worked across existing infrastructure — giving customers agency and visibility regardless of where they started.</p>
+
+    <h3 class="cs-subh">Unified Messaging Framework</h3>
+    <p>Audited and streamlined scores of status and error messages down to four core types with clear, actionable language. Added proactive "device waiting to ship" notifications to set expectations.</p>
+    <div class="cs-fig pad">
+      <img src="_images/vz-messaging-matrix.png" alt="Number Transfer Messaging Matrix mapping transfer steps to proactive SMS and web status messages, including the fallout branch." />
+      <figcaption>Port Status Messaging Matrix — consolidating dozens of messages into four core types across SMS and web, including the fallout branch.</figcaption>
+    </div>
+
+    <h3 class="cs-subh">Retail to Digital Handoff</h3>
+    <p>Created an SMS-based bridge for the 75% of customers who started in stores:</p>
+    <ul class="cs-bullets">
+      <li>Sent automated text messages to customers who initiated transfers.</li>
+      <li>Linked to a mobile web form for missing information.</li>
+      <li>Provided a real-time status tracker for completed transfers.</li>
+    </ul>
+    <div class="cs-fig pad">
+      <img src="_images/vz-handoff-flow.png" alt="Diagram: Store (POS) hands off to Digital Self Serve (SMS to Form) and Care Assisted (ACSS module)." />
+      <figcaption>Retail-to-digital handoff: when a customer chooses “port later,” a tokenized SMS link routes them to self-service — with the same intent captured in the care-assisted channel.</figcaption>
+    </div>
+    <div class="cs-fig">
+      <img src="_images/vz-sms-to-web.png" alt="SMS thread leading to Verizon mobile-web screens: transfer checklist, get information, enter account info, review and submit." />
+      <figcaption>SMS-to-web self-service flow allowing customers to complete a number transfer from their mobile device.</figcaption>
+    </div>
+
+    <h3 class="cs-subh">Self-Service Status and Updates</h3>
+    <p>Built responsive interfaces allowing customers to:</p>
+    <ul class="cs-bullets">
+      <li>Check transfer status across web, app, and IVR.</li>
+      <li>Submit missing account information on their own schedule.</li>
+      <li>Receive clear, jargon-free guidance on next steps.</li>
+    </ul>
+    <div class="cs-fig">
+      <img src="_images/vz-status-web.png" alt="SMS thread and three Verizon mobile-web status screens showing transfer info received, transfer started, and SIM install." />
+      <figcaption>Transfer status surfaced with real-time tracking through the porting journey, triggered by proactive SMS.</figcaption>
+    </div>
+    <div class="cs-fig pad">
+      <img src="_images/vz-status-app.png" alt="Four My Verizon app screens showing the number-transfer status tracker with received, started, and approved steps." />
+      <figcaption>The same status tracker surfaced inside the My Verizon app.</figcaption>
+    </div>
+    <div class="cs-fig">
+      <img src="_images/vz-recovery.png" alt="SMS thread and Verizon mobile-web screens with a missing-account-info banner, PIN/password entry, and an updated-details confirmation." />
+      <figcaption>Self-service failure recovery: customers supply missing account info (PIN, password, zip) directly, with clear confirmation when it’s accepted.</figcaption>
+    </div>
+
+    <h3 class="cs-subh">Cross-Channel Integration</h3>
+    <p>Coordinated with technical teams to sync data across retail systems, IVR platforms, and digital channels — ensuring consistent information regardless of touchpoint.</p>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Results)</div>
+    <div class="cs-result">
+      <p class="big"><b>2.5% reduction in fallouts</b> in the year following launch (2022) — roughly 1.5M fewer failed transfers annually.</p>
+    </div>
+  </section>
+
+  <section class="cs-sec">
+    <div class="kick">(Lessons Learned)</div>
+    <div class="cs-lessons">
+      <div class="item"><p><b>Working Within Constraints</b> — this project taught me how to drive customer experience improvements within the reality of legacy systems. Rather than waiting for a perfect technical solution, I focused on the experience layer: unified messaging, proactive communication, and smart channel handoffs.</p></div>
+      <div class="item"><p><b>Cross-Functional Orchestration</b> — success required aligning retail, digital, IVR, and technical teams around a shared vision. I used the service blueprint as a collaboration tool to build consensus and identify integration points across siloed systems.</p></div>
+      <div class="item"><p><b>Incremental Impact</b> — by starting with the highest-volume channel (retail-to-digital) and the clearest pain point (messaging), we could deliver value quickly while building toward a more comprehensive omnichannel solution.</p></div>
+    </div>
+  </section>
+
+  <nav class="cs-pager">
+    <a class="prev" href="personalized-shopping.html">
+      <span class="dir">← Previous</span>
+      <span class="pname">Personalized Shopping</span>
+    </a>
+    <a class="next" href="xfi-reimagined.html">
+      <span class="dir">Next →</span>
+      <span class="pname">xFi, reimagined</span>
+    </a>
+  </nav>
+
+  <footer class="foot">
+    <p class="big">Working on something complex?<br />Let's think it through together.</p>
+    <div class="contact">
+      <a href="mailto:brendanrohan@gmail.com">brendanrohan@gmail.com</a><br />
+      (917) 318-1263<br />
+      <a href="https://www.linkedin.com/in/brendanrohan" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
