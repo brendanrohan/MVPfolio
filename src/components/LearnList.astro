@@ -1,0 +1,18 @@
+---
+interface Item {
+  bold: string;
+  text: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="cs-learn">
+  {items.map(item => (
+    <li><b>{item.bold}</b> — {item.text}</li>
+  ))}
+</ul>

@@ -1,0 +1,9 @@
+---
+interface Props {
+  text?: string;
+}
+
+const { text = 'Case study in progress — full write-up coming soon' } = Astro.props;
+---
+
+<div class="cs-wip">{text}</div>

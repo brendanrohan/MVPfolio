@@ -1,0 +1,231 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Kicker from '../components/Kicker.astro';
+import WorkCard from '../components/WorkCard.astro';
+import HistoryRow from '../components/HistoryRow.astro';
+import CaseHeader from '../components/CaseHeader.astro';
+import CaseMeta from '../components/CaseMeta.astro';
+import CaseSection from '../components/CaseSection.astro';
+import MetricsTable from '../components/MetricsTable.astro';
+import LearnList from '../components/LearnList.astro';
+import BulletList from '../components/BulletList.astro';
+import Figure from '../components/Figure.astro';
+import ResultHighlight from '../components/ResultHighlight.astro';
+import CompareTable from '../components/CompareTable.astro';
+import LayerDiagram from '../components/LayerDiagram.astro';
+import QGrid from '../components/QGrid.astro';
+import QCard from '../components/QCard.astro';
+import FlowSteps from '../components/FlowSteps.astro';
+import Pager from '../components/Pager.astro';
+import WipNotice from '../components/WipNotice.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="System — Brendan Rohan" screenLabel="Style Guide">
+  <Nav />
+
+  <header class="hero">
+    <Kicker text="System" />
+    <h1 class="intro">Living Style Guide</h1>
+    <p class="sub">Every token and component variant, rendered from the real project files. If it looks wrong here, it's wrong everywhere.</p>
+  </header>
+
+  <!-- TOKENS SECTION -->
+  <section class="section">
+    <Kicker text="Color Tokens" />
+    <div class="system-colors">
+      <div class="color-group">
+        <h3 class="cs-subh">Semantic Colors</h3>
+        <div class="color-swatches">
+          <div class="swatch" style="background: var(--bg-page);"><span>--bg-page</span></div>
+          <div class="swatch" style="background: var(--bg-card);"><span>--bg-card</span></div>
+          <div class="swatch" style="background: var(--bg-pill);"><span>--bg-pill</span></div>
+          <div class="swatch" style="background: var(--accent); color: #fff;"><span>--accent</span></div>
+          <div class="swatch" style="background: var(--text-primary); color: #fff;"><span>--text-primary</span></div>
+          <div class="swatch" style="background: var(--text-secondary); color: #fff;"><span>--text-secondary</span></div>
+          <div class="swatch" style="background: var(--text-tertiary); color: #fff;"><span>--text-tertiary</span></div>
+          <div class="swatch" style="background: var(--border-default);"><span>--border-default</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <Kicker text="Typography" />
+    <div class="system-type">
+      <p style="font-family: var(--font-sans); font-size: 24px;">Hanken Grotesk — Primary Sans</p>
+      <p style="font-family: var(--font-mono); font-size: 16px;">JetBrains Mono — Monospace</p>
+      <p style="font-family: var(--font-script); font-size: 32px; font-style: italic;">Cormorant — Script/Serif</p>
+    </div>
+  </section>
+
+  <!-- COMPONENTS SECTION -->
+  <section class="section">
+    <Kicker text="Kicker Component" />
+    <div class="system-demo">
+      <Kicker text="Example Label" />
+    </div>
+  </section>
+
+  <section class="section">
+    <Kicker text="WorkCard Component" />
+    <div class="worklist" style="max-width: 500px;">
+      <WorkCard
+        href="#"
+        index="01"
+        company="Company"
+        title="Project Title"
+        description="Brief description of the project and its impact."
+        image="/_images/hp_qs_RoomSensors.png"
+        imageAlt="Example"
+      />
+    </div>
+  </section>
+
+  <section class="section">
+    <Kicker text="HistoryRow Component" />
+    <div class="history" style="max-width: 800px;">
+      <HistoryRow
+        year="2020 — 2024"
+        org="Company Name"
+        role="Job Title"
+        description="Description of responsibilities and achievements at this company."
+        notableText="Project A, Project B, Project C."
+      />
+    </div>
+  </section>
+
+  <section class="section">
+    <Kicker text="CaseMeta Component" />
+    <CaseMeta
+      role="Lead Designer"
+      duration="6 months"
+      year="2024"
+      tags={['UX Design', 'Research', 'Strategy']}
+    />
+  </section>
+
+  <section class="section">
+    <Kicker text="MetricsTable Component" />
+    <MetricsTable metrics={[
+      { label: 'Metric one', value: '1,234' },
+      { label: 'Metric two', value: '56%' },
+      { label: 'Metric three', value: '7.8K' }
+    ]} />
+  </section>
+
+  <section class="section">
+    <Kicker text="LearnList Component" />
+    <LearnList items={[
+      { bold: 'Key insight one', text: 'supporting detail about this insight.' },
+      { bold: 'Key insight two', text: 'supporting detail about this second insight.' },
+      { bold: 'Key insight three', text: 'supporting detail about this third insight.' }
+    ]} />
+  </section>
+
+  <section class="section">
+    <Kicker text="BulletList Component" />
+    <BulletList items={[
+      'First bullet point item',
+      'Second bullet point item',
+      'Third bullet point item'
+    ]} />
+  </section>
+
+  <section class="section">
+    <Kicker text="ResultHighlight Component" />
+    <ResultHighlight
+      text="25% improvement in conversion rate after implementing the new design system."
+      highlight="25% improvement"
+    />
+  </section>
+
+  <section class="section">
+    <Kicker text="CompareTable Component" />
+    <CompareTable
+      headers={['Feature', 'Before', 'After']}
+      rows={[
+        { action: 'Task completion', before: 'Complex multi-step process', after: 'Single action' },
+        { action: 'User satisfaction', before: 'Mixed feedback', after: 'Highly positive' }
+      ]}
+    />
+  </section>
+
+  <section class="section">
+    <Kicker text="LayerDiagram Component" />
+    <LayerDiagram layers={[
+      { head: 'Top Layer', body: 'Description of the top layer functionality.' },
+      { head: 'Middle Layer', body: 'Description of the middle layer functionality.' },
+      { head: 'Bottom Layer', body: 'Description of the bottom layer functionality.' }
+    ]} />
+  </section>
+
+  <section class="section">
+    <Kicker text="QGrid / QCard Components" />
+    <QGrid>
+      <QCard
+        label="Q1 · Topic"
+        title="Question title here?"
+        text="Answer or explanation text goes here with supporting details."
+      />
+      <QCard
+        label="Q2 · Topic"
+        title="Another question?"
+        text="Another answer or explanation with relevant context."
+      />
+    </QGrid>
+  </section>
+
+  <section class="section">
+    <Kicker text="FlowSteps Component" />
+    <FlowSteps steps={['Step One', 'Step Two', 'Step Three']} />
+  </section>
+
+  <section class="section">
+    <Kicker text="Pager Component" />
+    <Pager
+      prev={{ href: '#', name: 'Previous Project' }}
+      next={{ href: '#', name: 'Next Project' }}
+    />
+  </section>
+
+  <section class="section">
+    <Kicker text="WipNotice Component" />
+    <WipNotice />
+  </section>
+
+  <Footer showKicker />
+</Base>
+
+<style>
+  .system-colors {
+    margin-top: 24px;
+  }
+  .color-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .swatch {
+    padding: 24px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-default);
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .system-type {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .system-demo {
+    margin-top: 16px;
+    padding: 24px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-default);
+  }
+</style>

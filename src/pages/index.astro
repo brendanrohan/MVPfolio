@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Kicker from '../components/Kicker.astro';
+import WorkCard from '../components/WorkCard.astro';
+import Footer from '../components/Footer.astro';
+
+const works = [
+  {
+    href: '/quiet-signals',
+    index: '01',
+    company: 'Personal',
+    title: 'Quiet Signals',
+    description: "A caregiver companion that doesn't feel like surveillance.",
+    image: '/_images/hp_qs_RoomSensors.png',
+    imageAlt: 'Quiet Signals Room Sensors'
+  },
+  {
+    href: '/personalized-shopping',
+    index: '02',
+    company: 'AT&T',
+    title: 'A Personalized Shopping Experience',
+    description: 'Intent + data reshaping how people buy phones and plans.',
+    image: '/_images/hp_att_ShoppersProfile.png',
+    imageAlt: "AT&T Personalized Shopping"
+  },
+  {
+    href: '/number-transfer-redesign',
+    index: '03',
+    company: 'Verizon',
+    title: 'Number Transfers',
+    description: 'A fragmented support process made transparent end to end across retail, digital and service channels.',
+    image: '/_images/hp_vz_NumberTransfer.png',
+    imageAlt: 'Verizon Number Transfer Omnichannel'
+  },
+  {
+    href: '/xfi-reimagined',
+    index: '04',
+    company: 'Comcast',
+    title: 'xFi, reimagined',
+    description: 'WiFi management for when the network can talk back.',
+    image: '/_images/hp_xfi_ConversationalDesign.png',
+    imageAlt: 'xFi conversational design concept'
+  }
+];
+---
+
+<Base title="Brendan Rohan — UX Designer" screenLabel="Work / Home">
+  <Nav currentPage="work" showLocation />
+
+  <header class="hero">
+    <Kicker text="Introduction" />
+    <h1 class="intro">I help organizations turn <em>emerging technology</em> into experiences people <span class="o">actually use</span>.</h1>
+    <p class="sub">I bring systems thinking, storytelling, product strategy, and a sense for what resonates — plus a relentless curiosity about what people really want.</p>
+    <div class="hero-links">
+      <a href="mailto:brendanrohan@gmail.com">Contact</a>
+      <a href="https://drive.google.com/file/d/1ccV1od5KwEUAi4rZOvOOX8fiUHjJwAA_/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <Kicker text="Selected Work" />
+    <div class="worklist">
+      {works.map(work => (
+        <WorkCard
+          href={work.href}
+          index={work.index}
+          company={work.company}
+          title={work.title}
+          description={work.description}
+          image={work.image}
+          imageAlt={work.imageAlt}
+        />
+      ))}
+    </div>
+  </section>
+
+  <Footer showKicker />
+</Base>

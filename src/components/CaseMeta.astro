@@ -1,0 +1,31 @@
+---
+interface Props {
+  role: string;
+  duration: string;
+  year: string;
+  tags: string[];
+}
+
+const { role, duration, year, tags } = Astro.props;
+---
+
+<div class="cs-meta">
+  <div>
+    <div class="k">Role</div>
+    <div class="v">{role}</div>
+  </div>
+  <div>
+    <div class="k">Duration</div>
+    <div class="v">{duration}</div>
+  </div>
+  <div>
+    <div class="k">Year</div>
+    <div class="v">{year}</div>
+  </div>
+  <div>
+    <div class="k">Tags</div>
+    <div class="v tags">
+      {tags.map(tag => <span>{tag}</span>)}
+    </div>
+  </div>
+</div>

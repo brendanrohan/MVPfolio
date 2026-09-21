@@ -1,0 +1,80 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Kicker from '../components/Kicker.astro';
+import HistoryRow from '../components/HistoryRow.astro';
+import Footer from '../components/Footer.astro';
+
+const history = [
+  {
+    year: '2026',
+    org: 'Career Break',
+    role: 'Independent Product Work',
+    description: 'Using this period to build AI-first design fluency through real personal projects.',
+    notableText: 'Quiet Signals caregiving app, Portfolio tracker.'
+  },
+  {
+    year: '2022 — 2025',
+    org: 'AT&T',
+    role: 'Design Strategist',
+    description: 'Identified opportunities throughout the customer experience to mix business imperatives with a user-centered approach.',
+    notableText: "Shopper's Profile, Personalized Shopping, Split Pay, Fiber CI."
+  },
+  {
+    year: '2019 — 2021',
+    org: 'Verizon',
+    role: 'Experience Designer',
+    description: 'Conceived and built omnichannel service experiences making the process easier and more secure for 100M+ customers.',
+    notableText: 'Number Transfer, Port Out Security, Chat/Search Integration.'
+  },
+  {
+    year: '2016 — 2018',
+    org: 'Comcast',
+    role: 'Product Designer',
+    description: 'Worked on the xFi WiFi management app from launch to 10M+ users. Developed key features including profile management and conversational UI.',
+    notableText: 'Profiles & Devices, Conversational / Voice UI.'
+  },
+  {
+    year: '2014 — 2016',
+    org: 'Publicis / Razorfish',
+    role: 'Information Architect',
+    description: 'Part of the dedicated agency for JPMorgan Chase digital initiatives. Launched early prototypes for digital wallets and mobile payments.',
+    notableText: 'Freedom Points App, Chase Wallet Prototype, Mobile Marketplace.'
+  },
+  {
+    year: '2011 — 2014',
+    org: 'Publicis / Rosetta',
+    role: 'Content Strategist',
+    description: 'Specialized in content-first UX design for websites and mobile apps.',
+    notableLabel: 'Notable clients',
+    notableText: 'Financial Services (JPMorgan Chase, Fidelity), Consumer Goods (Panasonic, Lenovo, AT&T), and Healthcare (Pfizer, UnitedHealthcare).'
+  }
+];
+---
+
+<Base title="Brendan Rohan — About" screenLabel="About">
+  <Nav currentPage="about" />
+
+  <section class="about-body">
+    <Kicker text="About" />
+    <p>I'm a UX designer who has spent 15+ years working at the edge of new technology — figuring out what it means for the people who use it, and for the teams who have to ship it.</p>
+    <p>My work spans early concept through production: research, strategy, and the kind of hands-on design that turns an ambitious idea into something <em>real</em>. I've done it inside agencies, inside large product organizations, and on my own — for companies like AT&T, Verizon, Comcast, and JPMorgan Chase.</p>
+    <p>Right now I'm focused on <span class="o">AI-first design</span> — building fluency through real personal projects, and helping organizations turn emerging technology into experiences people actually want to use.</p>
+  </section>
+
+  <section class="history">
+    <Kicker text="Work History" />
+    {history.map(row => (
+      <HistoryRow
+        year={row.year}
+        org={row.org}
+        role={row.role}
+        description={row.description}
+        notableLabel={row.notableLabel}
+        notableText={row.notableText}
+      />
+    ))}
+  </section>
+
+  <Footer />
+</Base>

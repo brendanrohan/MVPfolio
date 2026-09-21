@@ -1,0 +1,27 @@
+---
+interface Props {
+  src?: string;
+  alt?: string;
+  caption?: string;
+  variant?: 'default' | 'tall' | 'wide' | 'screens' | 'pad';
+  placeholder?: string;
+  placeholderId?: string;
+}
+
+const { src, alt, caption, variant = 'default', placeholder, placeholderId } = Astro.props;
+
+const classNames = ['cs-fig'];
+if (variant === 'pad') classNames.push('pad');
+if (variant === 'tall') classNames.push('tall');
+if (variant === 'wide') classNames.push('wide');
+if (variant === 'screens') classNames.push('screens');
+---
+
+<figure class={classNames.join(' ')}>
+  {src ? (
+    <img src={src} alt={alt} />
+  ) : (
+    <image-slot id={placeholderId} placeholder={placeholder}></image-slot>
+  )}
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>

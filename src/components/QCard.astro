@@ -1,0 +1,15 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  text: string;
+}
+
+const { label, title, text } = Astro.props;
+---
+
+<div class="q-card">
+  <div class="q-label">{label}</div>
+  <div class="q-title">{title}</div>
+  <p>{text}</p>
+</div>

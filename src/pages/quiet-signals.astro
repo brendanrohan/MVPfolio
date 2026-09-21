@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import CaseHeader from '../components/CaseHeader.astro';
+import CaseMeta from '../components/CaseMeta.astro';
+import CaseSection from '../components/CaseSection.astro';
+import Figure from '../components/Figure.astro';
+import Pager from '../components/Pager.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Quiet Signals — Brendan Rohan" screenLabel="Case Study — Quiet Signals">
+  <Nav />
+
+  <CaseHeader
+    company="Personal · 2026"
+    title="Quiet Signals: A caregiver companion that doesn't feel like surveillance"
+    lead="An AI-first concept that senses, gently, whether an aging parent is okay today — without turning care into monitoring."
+    leadHighlight="gently"
+    wip
+  >
+    <CaseMeta
+      role="Product Designer"
+      duration="Ongoing"
+      year="2026"
+      tags={['AI-First', 'Conversational UX', 'iOS']}
+    />
+  </CaseHeader>
+
+<CaseSection kicker="Overview">
+    <p>Quiet Signals is a personal project exploring what AI-first design means for family caregiving — building gentle awareness of a loved one's wellbeing from ambient, everyday signals rather than intrusive check-ins or tracking.</p>
+  </CaseSection>
+
+<CaseSection kicker="Challenge/Problem">
+    <p style="border-left: 3px solid var(--accent); padding-left: 20px; margin-left: 0;">An AI-assisted app that helps adult children sense — gently — whether an aging parent is okay today, without constant check-ins that might strain the relationship.</p>
+    <br>
+    <p> We live an aging society where people are living longer than ever. Most people prefer to age in place but this can be precarious as they get older and the ability to manage a household and do the daily activities of living becomes increasing harder.</p>
+    <p> This is personal as I have a parent who is going through the day to day. But how can I get information on movement day to day without asking.</p>
+    <p> I wanted to build something that provided reassurance without making my mother feel monitored.
+      And a modular system that can be upgraded as the behaviors of aging get more numerous. 
+    </p>
+  </CaseSection>
+
+ <CaseSection kicker="Approach">
+    <p> <strong> From Tracking to Interpretation: </strong> The wrong product can turn the caregiver into a watcher. The right product quietly interprets in the background — something that takes the small, ambinet signals of an ordinary day (movement, room transitions, time-of-day patterns) and surfaces them as concise, plain language summary.</p>
+    <p> This shift from tracking to interpretation changed the whole product. It moved the design problem upstream — away from dashboards and towards the harder questions: what should the AI say, when should it stay quiet, and how does it talk about uncertainity without raising alarms </p>
+     </CaseSection>
+
+<!--
+
+
+  <CaseSection kicker="Selected Visuals">
+    <Figure
+      variant="tall"
+      placeholderId="qs-hero"
+      placeholder="Drop: concept hero / key screen"
+      caption="Placeholder — drop a key concept frame here."
+    />
+    <Figure
+      variant="screens"
+      placeholderId="qs-screens"
+      placeholder="Drop: product screens"
+      caption="Placeholder — drop product screens here."
+    />
+  </CaseSection>
+
+  -->
+
+  <Pager
+    prev={{ href: '/xfi-reimagined', name: 'xFi, reimagined' }}
+    next={{ href: '/personalized-shopping', name: 'Personalized Shopping' }}
+  />
+
+  <Footer />
+</Base>

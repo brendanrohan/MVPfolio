@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import CaseHeader from '../components/CaseHeader.astro';
+import CaseMeta from '../components/CaseMeta.astro';
+import CaseSection from '../components/CaseSection.astro';
+import MetricsTable from '../components/MetricsTable.astro';
+import LearnList from '../components/LearnList.astro';
+import BulletList from '../components/BulletList.astro';
+import Figure from '../components/Figure.astro';
+import ResultHighlight from '../components/ResultHighlight.astro';
+import Pager from '../components/Pager.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Number Transfer Redesign — Brendan Rohan" screenLabel="Case Study — Number Transfer">
+  <Nav />
+
+  <CaseHeader
+    company="Verizon"
+    title="Number Transfer Redesign: Reducing Customer Friction Across Channels"
+    lead="Redesigned the mobile number transfer experience to reduce a 33% fallout rate, resulting in 1.5M fewer failed transfers annually."
+    leadHighlight="1.5M fewer failed transfers"
+  >
+    <CaseMeta
+      role="Sr. Experience Designer"
+      duration="6 months"
+      year="2022"
+      tags={['UX Design', 'Service Design', 'Omnichannel', 'Research']}
+    />
+  </CaseHeader>
+
+  <CaseSection kicker="Overview">
+    <p>When customers transferred their mobile numbers to Verizon, 33% experienced "fallout" — failures that require manual intervention by customer service representatives. This created significant operational costs and often a poor first service experience for new customers.</p>
+  </CaseSection>
+
+  <CaseSection kicker="Challenge">
+    <p>In addition to the third of customers who experienced fallout, a small but significant number didn't have or know the account numbers and PINs required from their old carrier. With no visibility into transfer status and no way to self-correct, customers were forced to troubleshoot on their own — bouncing between retail stores, websites, and customer service.</p>
+
+    <h3 class="cs-subh">Key Metrics</h3>
+    <MetricsTable metrics={[
+      { label: 'Annual ports', value: '9.4M' },
+      { label: 'Monthly customer service calls', value: '314K · 4% of all Verizon calls' },
+      { label: 'Transfers initiated in retail stores', value: '75%' },
+      { label: 'Fallout rate requiring manual resolution', value: '33%' }
+    ]} />
+  </CaseSection>
+
+  <CaseSection kicker="Research">
+    <p>We conducted user interviews and collaborated with product managers to create a comprehensive service blueprint mapping the end-to-end porting journey across all touchpoints.</p>
+
+    <Figure
+      src="/_images/vz-user-research.jpg"
+      alt="Customer journey map across Search+Learn, Shop+Buy, Wait for Transfer, and Transfer Complete stages, with channels, thoughts/feelings, pain points, and opportunities captured on sticky notes."
+      caption="Research synthesis — a journey map of the porting experience across stages, capturing customer actions, thoughts, pain points, and opportunities."
+    />
+    <Figure
+      src="/_images/vz-service-blueprint.jpg"
+      alt="Service blueprint mapping customer actions and port-process steps against front-stage channels (retail, web, SMS, IVR, chat, email) and backstage teams (LNP center, ACSS, POS)."
+      caption="Service blueprint documenting the full porting journey across every front-stage channel and backstage team — the foundation for the redesign."
+    />
+
+    <h3 class="cs-subh">What we learned</h3>
+    <LearnList items={[
+      { bold: 'Channel confusion', text: 'customers bounced between retail, web, and phone with inconsistent messaging at each touchpoint.' },
+      { bold: 'Information opacity', text: 'the transfer process felt like a "black box" with no visibility into status or next steps.' },
+      { bold: 'Messaging chaos', text: 'dozens of error messages with conflicting language and unclear action items.' },
+      { bold: 'System fragmentation', text: "legacy backend systems across retail, IVR, and digital channels didn't communicate effectively." }
+    ]} />
+  </CaseSection>
+
+  <CaseSection kicker="Approach">
+    <p>Rather than rebuild legacy systems, we designed a unified customer experience layer that worked across existing infrastructure — giving customers agency and visibility regardless of where they started.</p>
+
+    <h3 class="cs-subh">Unified Messaging Framework</h3>
+    <p>Audited and streamlined scores of status and error messages down to four core types with clear, actionable language. Added proactive "device waiting to ship" notifications to set expectations.</p>
+    <Figure
+      src="/_images/vz-messaging-matrix.png"
+      alt="Number Transfer Messaging Matrix mapping transfer steps to proactive SMS and web status messages, including the fallout branch."
+      caption="Port Status Messaging Matrix — consolidating dozens of messages into four core types across SMS and web, including the fallout branch."
+      variant="pad"
+    />
+
+    <h3 class="cs-subh">Retail to Digital Handoff</h3>
+    <p>Created an SMS-based bridge for the 75% of customers who started in stores:</p>
+    <BulletList items={[
+      'Sent automated text messages to customers who initiated transfers.',
+      'Linked to a mobile web form for missing information.',
+      'Provided a real-time status tracker for completed transfers.'
+    ]} />
+    <Figure
+      src="/_images/vz-handoff-flow.png"
+      alt="Diagram: Store (POS) hands off to Digital Self Serve (SMS to Form) and Care Assisted (ACSS module)."
+      caption="Retail-to-digital handoff: when a customer chooses 'port later,' a tokenized SMS link routes them to self-service — with the same intent captured in the care-assisted channel."
+      variant="pad"
+    />
+    <Figure
+      src="/_images/vz-sms-to-web.png"
+      alt="SMS thread leading to Verizon mobile-web screens: transfer checklist, get information, enter account info, review and submit."
+      caption="SMS-to-web self-service flow allowing customers to complete a number transfer from their mobile device."
+    />
+
+    <h3 class="cs-subh">Self-Service Status and Updates</h3>
+    <p>Built responsive interfaces allowing customers to:</p>
+    <BulletList items={[
+      'Check transfer status across web, app, and IVR.',
+      'Submit missing account information on their own schedule.',
+      'Receive clear, jargon-free guidance on next steps.'
+    ]} />
+    <Figure
+      src="/_images/vz-status-web.png"
+      alt="SMS thread and three Verizon mobile-web status screens showing transfer info received, transfer started, and SIM install."
+      caption="Transfer status surfaced with real-time tracking through the porting journey, triggered by proactive SMS."
+    />
+    <Figure
+      src="/_images/vz-status-app.png"
+      alt="Four My Verizon app screens showing the number-transfer status tracker with received, started, and approved steps."
+      caption="The same status tracker surfaced inside the My Verizon app."
+      variant="pad"
+    />
+    <Figure
+      src="/_images/vz-recovery.png"
+      alt="SMS thread and Verizon mobile-web screens with a missing-account-info banner, PIN/password entry, and an updated-details confirmation."
+      caption="Self-service failure recovery: customers supply missing account info (PIN, password, zip) directly, with clear confirmation when it's accepted."
+    />
+
+    <h3 class="cs-subh">Cross-Channel Integration</h3>
+    <p>Coordinated with technical teams to sync data across retail systems, IVR platforms, and digital channels — ensuring consistent information regardless of touchpoint.</p>
+  </CaseSection>
+
+  <CaseSection kicker="Results">
+    <ResultHighlight
+      text="2.5% reduction in fallouts in the year following launch (2022) — roughly 1.5M fewer failed transfers annually."
+      highlight="2.5% reduction in fallouts"
+    />
+  </CaseSection>
+
+  <CaseSection kicker="Lessons Learned">
+    <div class="cs-lessons">
+      <div class="item"><p><b>Working Within Constraints</b> — this project taught me how to drive customer experience improvements within the reality of legacy systems. Rather than waiting for a perfect technical solution, I focused on the experience layer: unified messaging, proactive communication, and smart channel handoffs.</p></div>
+      <div class="item"><p><b>Cross-Functional Orchestration</b> — success required aligning retail, digital, IVR, and technical teams around a shared vision. I used the service blueprint as a collaboration tool to build consensus and identify integration points across siloed systems.</p></div>
+      <div class="item"><p><b>Incremental Impact</b> — by starting with the highest-volume channel (retail-to-digital) and the clearest pain point (messaging), we could deliver value quickly while building toward a more comprehensive omnichannel solution.</p></div>
+    </div>
+  </CaseSection>
+
+  <Pager
+    prev={{ href: '/personalized-shopping', name: 'Personalized Shopping' }}
+    next={{ href: '/xfi-reimagined', name: 'xFi, reimagined' }}
+  />
+
+  <Footer />
+</Base>

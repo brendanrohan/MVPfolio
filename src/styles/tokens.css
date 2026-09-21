@@ -1,0 +1,95 @@
+/* =========================================================
+   Design Tokens — Brendan Rohan Portfolio
+
+   This file is the SINGLE SOURCE OF TRUTH for all visual values.
+   Never hardcode oklch() literals anywhere else in the codebase.
+
+   Structure:
+   1. Primitive tokens — raw values (colors, fonts)
+   2. Semantic tokens — references to primitives for specific uses
+   ========================================================= */
+
+:root {
+  /* ---------------------------------------------------------
+     PRIMITIVES — Raw color values
+     Naming: --color-{hue}-{lightness}
+     --------------------------------------------------------- */
+
+  /* Warm neutrals (hue ~60-80) */
+  --color-warm-95: oklch(0.975 0.006 80);   /* lightest - paper */
+  --color-warm-91: oklch(0.91 0.006 75);    /* pill backgrounds */
+  --color-warm-86: oklch(0.86 0.008 70);    /* borders/lines */
+  --color-warm-62: oklch(0.62 0.01 60);     /* faint text */
+  --color-warm-45: oklch(0.45 0.012 60);    /* soft text */
+  --color-warm-22: oklch(0.22 0.012 60);    /* ink - main text */
+
+  /* Accent (terracotta/rust - hue 41) */
+  --color-accent-64: oklch(0.64 0.193 41);  /* primary accent */
+  --color-accent-58: oklch(0.58 0.185 41);  /* hero band variant */
+
+  /* Surface variants */
+  --color-surface-96: oklch(0.965 0.006 80);  /* card backgrounds */
+  --color-surface-94: oklch(0.94 0.006 75);   /* layer headers */
+  --color-surface-82: oklch(0.82 0.02 70);    /* hover borders */
+
+  /* Shadow colors */
+  --color-shadow: oklch(0.4 0.03 60 / 0.4);
+
+  /* ---------------------------------------------------------
+     PRIMITIVES — Typography
+     --------------------------------------------------------- */
+
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-script: "Cormorant", Georgia, serif;
+
+  /* ---------------------------------------------------------
+     SEMANTIC TOKENS — Purpose-driven references
+     These are what components should actually use.
+     --------------------------------------------------------- */
+
+  /* Backgrounds */
+  --bg-page: var(--color-warm-95);
+  --bg-card: var(--color-surface-96);
+  --bg-pill: var(--color-warm-91);
+  --bg-layer-head: var(--color-surface-94);
+  --bg-hero: var(--color-accent-58);
+
+  /* Text */
+  --text-primary: var(--color-warm-22);
+  --text-secondary: var(--color-warm-45);
+  --text-tertiary: var(--color-warm-62);
+  --text-accent: var(--color-accent-64);
+
+  /* Borders */
+  --border-default: var(--color-warm-86);
+  --border-hover: var(--color-surface-82);
+
+  /* Interactive */
+  --accent: var(--color-accent-64);
+  --accent-alt: var(--color-accent-58);
+
+  /* Selection */
+  --selection-bg: var(--color-accent-64);
+  --selection-text: #fff;
+
+  /* Shadows */
+  --shadow-card: 0 14px 34px -18px var(--color-shadow);
+
+  /* ---------------------------------------------------------
+     LEGACY ALIASES — For compatibility during migration
+     These map old variable names to new semantic tokens.
+     Eventually these should be replaced in components.css
+     --------------------------------------------------------- */
+
+  --ink: var(--text-primary);
+  --ink-soft: var(--text-secondary);
+  --ink-faint: var(--text-tertiary);
+  --paper: var(--bg-page);
+  --line: var(--border-default);
+  --pill: var(--bg-pill);
+  --hero-blue: var(--accent-alt);
+  --mono: var(--font-mono);
+  --sans: var(--font-sans);
+  --script: var(--font-script);
+}

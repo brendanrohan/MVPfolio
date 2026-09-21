@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string;
+  highlight: string;
+}
+
+const { text, highlight } = Astro.props;
+---
+
+<div class="cs-result">
+  <p class="big" set:html={text.replace(highlight, `<b>${highlight}</b>`)} />
+</div>

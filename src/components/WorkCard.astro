@@ -1,0 +1,27 @@
+---
+interface Props {
+  href: string;
+  index: string;
+  company: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+const { href, index, company, title, description, image, imageAlt } = Astro.props;
+---
+
+<a class="work-card" href={href}>
+  <div class="wc-visual">
+    <img src={image} alt={imageAlt} />
+  </div>
+  <div class="wc-body">
+    <div class="wc-meta">
+      <span class="ix">{index}</span>
+      <span class="yr">{company}</span>
+    </div>
+    <div class="nm2">{title}</div>
+    <div class="ds">{description}</div>
+  </div>
+</a>

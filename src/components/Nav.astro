@@ -1,0 +1,39 @@
+---
+interface Props {
+  currentPage?: 'work' | 'about';
+  showLocation?: boolean;
+}
+
+const { currentPage, showLocation = false } = Astro.props;
+---
+
+<nav class="nav">
+  <a class="nm" href="/">Brendan Rohan</a>
+  {showLocation && (
+    <div class="nav-loc">
+      New York, NY <span class="sep">·</span> <span id="local-time">—</span>
+    </div>
+  )}
+  <div class="links">
+    <a href="/" class:list={{ active: currentPage === 'work' }}>Work</a>
+    <a href="/about" class:list={{ active: currentPage === 'about' }}>About</a>
+  </div>
+</nav>
+
+{showLocation && (
+  <script>
+    (function () {
+      const el = document.getElementById('local-time');
+      if (!el) return;
+      function tick() {
+        el.textContent = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/New_York',
+          hour: 'numeric',
+          minute: '2-digit'
+        }).format(new Date()).toLowerCase();
+      }
+      tick();
+      setInterval(tick, 15000);
+    })();
+  </script>
+)}

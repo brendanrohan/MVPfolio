@@ -1,0 +1,32 @@
+---
+interface Link {
+  href: string;
+  name: string;
+}
+
+interface Props {
+  prev?: Link;
+  next?: Link;
+}
+
+const { prev, next } = Astro.props;
+---
+
+<nav class="cs-pager">
+  {prev ? (
+    <a class="prev" href={prev.href}>
+      <span class="dir">← Previous</span>
+      <span class="pname">{prev.name}</span>
+    </a>
+  ) : (
+    <div class="empty"></div>
+  )}
+  {next ? (
+    <a class="next" href={next.href}>
+      <span class="dir">Next →</span>
+      <span class="pname">{next.name}</span>
+    </a>
+  ) : (
+    <div class="empty"></div>
+  )}
+</nav>

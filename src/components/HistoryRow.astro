@@ -1,0 +1,38 @@
+---
+interface Props {
+  year: string;
+  org: string;
+  role: string;
+  description: string;
+  notableLabel?: string;
+  notableText?: string;
+  orgFontSize?: string;
+}
+
+const {
+  year,
+  org,
+  role,
+  description,
+  notableLabel = 'Notable projects',
+  notableText,
+  orgFontSize = '18px'
+} = Astro.props;
+---
+
+<div class="hist-row">
+  <div><span class="year">{year}</span></div>
+  <div>
+    <h3 class="org" style={`font-size: ${orgFontSize}`}>{org}</h3>
+    <p class="role">{role}</p>
+  </div>
+  <div>
+    <p class="desc">{description}</p>
+    {notableText && (
+      <p class="notable">
+        <span class="lbl">{notableLabel}</span>
+        {notableText}
+      </p>
+    )}
+  </div>
+</div>

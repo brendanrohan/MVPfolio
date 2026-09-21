@@ -1,0 +1,21 @@
+---
+interface Layer {
+  head: string;
+  body: string;
+}
+
+interface Props {
+  layers: Layer[];
+}
+
+const { layers } = Astro.props;
+---
+
+<div class="cs-layers">
+  {layers.map(layer => (
+    <div class="layer">
+      <div class="layer-head">{layer.head}</div>
+      <div class="layer-body">{layer.body}</div>
+    </div>
+  ))}
+</div>

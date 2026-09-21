@@ -1,0 +1,16 @@
+---
+interface Props {
+  steps: string[];
+}
+
+const { steps } = Astro.props;
+---
+
+<p class="cs-flow">
+  {steps.map((step, i) => (
+    <>
+      <span>{step}</span>
+      {i < steps.length - 1 && <span class="flow-sep">→</span>}
+    </>
+  ))}
+</p>

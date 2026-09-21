@@ -1,0 +1,19 @@
+---
+interface Props {
+  showKicker?: boolean;
+}
+
+const { showKicker = false } = Astro.props;
+---
+
+<footer class="foot">
+  <div class="foot-lead">
+    {showKicker && <div class="kick">(Contact)</div>}
+    <p class="big">Working on something complex? <br /> Let's think it through together.</p>
+  </div>
+  <div class="contact">
+    <a href="mailto:brendanrohan@gmail.com">brendanrohan@gmail.com</a><br />
+    (917) 318-1263<br />
+    <a href="https://www.linkedin.com/in/brendanrohan" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>

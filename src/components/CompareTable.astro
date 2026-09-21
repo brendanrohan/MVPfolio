@@ -1,0 +1,33 @@
+---
+interface Row {
+  action: string;
+  before: string;
+  after: string;
+}
+
+interface Props {
+  headers: [string, string, string];
+  rows: Row[];
+}
+
+const { headers, rows } = Astro.props;
+---
+
+<table class="cs-compare">
+  <thead>
+    <tr>
+      <th>{headers[0]}</th>
+      <th>{headers[1]}</th>
+      <th>{headers[2]}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {rows.map(row => (
+      <tr>
+        <td>{row.action}</td>
+        <td>{row.before}</td>
+        <td>{row.after}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

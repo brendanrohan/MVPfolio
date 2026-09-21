@@ -1,0 +1,19 @@
+---
+interface Props {
+  company: string;
+  title: string;
+  lead: string;
+  leadHighlight?: string;
+  wip?: boolean;
+}
+
+const { company, title, lead, leadHighlight, wip = false } = Astro.props;
+---
+
+<header class="cs-head">
+  <div class="kick">({company})</div>
+  <h1 class="cs-title">{title}</h1>
+  <p class="cs-lead" set:html={leadHighlight ? lead.replace(leadHighlight, `<span class="o">${leadHighlight}</span>`) : lead} />
+  {wip && <div class="cs-wip">Case study in progress — full write-up coming soon</div>}
+  <slot />
+</header>
