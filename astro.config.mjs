@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://brendanrohan.github.io',
-  base: '/MVPfolio',
+  site: 'https://brendan-rohan.com',
   build: {
     assets: '_assets'
   }
