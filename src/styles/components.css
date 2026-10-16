@@ -1186,3 +1186,114 @@ a { color: inherit; }
   .hb-top { transform: translateX(-120px); }
   .hb-bottom { transform: translateX(110px); }
 }
+
+/* ---------------------------------------------------------
+   COMPONENT — LinksModule
+   --------------------------------------------------------- */
+.links-module {
+  margin-top: 96px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.links-col {
+  min-width: 0;
+}
+
+.links-head {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.links-list li {
+  border-bottom: 1px solid var(--border-default);
+}
+
+.links-list li:last-child {
+  border-bottom: none;
+}
+
+.links-list a {
+  display: block;
+  padding: 14px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.links-list a:hover .link-label {
+  color: var(--accent);
+}
+
+.link-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.link-desc {
+  font-size: 15px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 720px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ---------------------------------------------------------
+   COMPONENT — Resources Grid
+   --------------------------------------------------------- */
+.resources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px 64px;
+  margin-top: 64px;
+}
+
+.resource-col {
+  min-width: 0;
+}
+
+.link-url {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-tertiary);
+  display: block;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.links-list a:hover .link-url {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 720px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

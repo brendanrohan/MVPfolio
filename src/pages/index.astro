@@ -3,7 +3,26 @@ import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
 import Kicker from '../components/Kicker.astro';
 import WorkCard from '../components/WorkCard.astro';
+import LinksModule from '../components/LinksModule.astro';
 import Footer from '../components/Footer.astro';
+
+const experiments = [
+  { label: 'Daylight Calendar', href: 'https://sun-tracker-80s-glow.lovable.app/' },
+  { label: 'Book Loggins', href: 'https://page-tally.lovable.app/' },
+  { label: '2026 NFC North', href: 'https://brendanrohan.github.io/nfc_north_2026_tracker/' }
+];
+
+const tools = [
+  { label: 'Explore and Compare Every Design Tool', href: 'https://designtools.fyi/' },
+  { label: 'Know what to call it', href: 'https://alltheterms.com/' },
+  { label: 'Design Studio', href: 'https://itspatmorgan.com/design-studio/' },
+  { label: 'Open Design', href: 'https://open-design.ai/' },
+  { label: 'Fancy Components', href: 'https://www.fancycomponents.dev/' },
+  { label: 'Gradient Supply', href: 'https://grainient.supply/' },
+  { label: 'Impeccable Style', href: 'https://impeccable.style/' },
+  { label: 'Text to Speech', href: 'https://elevenlabs.io/text-to-speech' },
+  { label: 'Simple PDF Editor', href: 'https://simplepdf.com/editor' }
+];
 
 const works = [
   {
@@ -74,6 +93,13 @@ const works = [
       ))}
     </div>
   </section>
+
+  <LinksModule
+    leftTitle="Experiments"
+    leftLinks={experiments}
+    rightTitle="Latest Tools"
+    rightLinks={tools}
+  />
 
   <Footer showKicker />
 </Base>

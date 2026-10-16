@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Kicker from '../components/Kicker.astro';
+import Footer from '../components/Footer.astro';
+
+const categories = [
+  {
+    title: 'Design Basics',
+    links: [
+      { label: 'Design Principles', href: 'https://principles.design/' },
+      { label: 'Laws of UX', href: 'https://lawsofux.com/' },
+      { label: 'Know What to Call it', href: 'https://alltheterms.com/' }
+    ]
+  },
+  {
+    title: 'Designers into AI',
+    links: [
+      { label: 'Claire Vo', href: 'https://www.chatprd.ai/how-i-ai' },
+      { label: 'Xinran Ma', href: 'https://designwithai.substack.com/' },
+      { label: 'Patrick Morgan', href: 'https://itspatmorgan.com/' },
+      { label: 'Elizabeth Lin', href: 'https://www.lalizlabeth.com/' },
+      { label: 'Dominik Gmeiner', href: 'https://www.write.dominikgmeiner.com/' }
+    ]
+  },
+  {
+    title: 'Product Exploration',
+    links: [
+      { label: 'Turn an idea into a spec', href: 'https://www.chatprd.ai/' },
+      { label: 'App Idea Finder', href: 'https://www.appideafinder.com/' },
+      { label: 'Founders Bay', href: 'https://www.foundersbay.com/' },
+      { label: 'Our Paths', href: 'https://our-paths.com/' },
+      { label: 'Every Expert', href: 'https://www.everyexpert.com/' }
+    ]
+  },
+  {
+    title: 'Design Inspiration',
+    links: [
+      { label: 'Bento Grids', href: 'https://bentogrids.com/' },
+      { label: 'Bored', href: 'https://www.bored.com/' },
+      { label: 'Varient', href: 'https://variant.com/community' },
+      { label: 'Landingfolio', href: 'https://www.landingfolio.com/' }
+    ]
+  },
+  {
+    title: 'Design Tools',
+    links: [
+      { label: 'Explore and Compare Every Design Tool', href: 'https://designtools.fyi/' },
+      { label: 'Toolfolio', href: 'https://toolfolio.com/' },
+      { label: 'Google Flow', href: 'https://flow.google.com/' },
+      { label: 'Product Hunt', href: 'https://www.producthunt.com/' },
+      { label: 'Open Vector', href: 'https://open.zerovector.design/' },
+      { label: 'Impeccable', href: 'https://impeccable.style/' },
+      { label: 'Give AI agent design taste', href: 'https://refero.design/mcp' }
+    ]
+  },
+  {
+    title: 'Styles and Components',
+    links: [
+      { label: 'Color Generator', href: 'https://kigen.design/color' },
+      { label: 'Unsplash', href: 'https://unsplash.com/' },
+      { label: 'Sprint', href: 'https://sprrrint.com/' },
+      { label: 'Tailwind CSS', href: 'https://tailwindcss.com/' },
+      { label: 'Shadcn/ui Theme Generator', href: 'https://tweakcn.com/' },
+      { label: 'React Component Library', href: 'https://ui.aceternity.com/' },
+      { label: 'Fancy Components', href: 'https://www.fancycomponents.dev/' },
+      { label: 'Loading UI', href: 'https://www.loading-ui.com/' }
+    ]
+  },
+  {
+    title: 'Visual Tools',
+    links: [
+      { label: 'Kling AI (Video and Image Generator)', href: 'https://kling.ai/' },
+      { label: 'AI Image Generator', href: 'https://starryai.com/' },
+      { label: 'Jitter Video', href: 'https://jitter.video/' },
+      { label: 'Illustrations', href: 'https://blush.design/' },
+      { label: 'Google Video Generator', href: 'https://aistudio.google.com/models/veo' },
+      { label: 'Make Videos in React', href: 'https://www.remotion.dev/' }
+    ]
+  }
+];
+---
+
+<Base title="Resources — Brendan Rohan" screenLabel="Resources">
+  <Nav currentPage="resources" />
+
+  <header class="hero">
+    <Kicker text="Resources" />
+    <h1 class="intro">Tools, inspiration, and people worth following.</h1>
+  </header>
+
+  <section class="resources-grid">
+    {categories.map(cat => (
+      <div class="resource-col">
+        <h3 class="links-head">{cat.title}</h3>
+        <ul class="links-list">
+          {cat.links.map(link => (
+            <li>
+              <a href={link.href} target="_blank" rel="noopener">
+                <span class="link-label">{link.label}</span>
+                <span class="link-url">{link.href}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <Footer showKicker />
+</Base>

@@ -1,0 +1,47 @@
+---
+interface LinkItem {
+  label: string;
+  href: string;
+  description?: string;
+}
+
+interface Props {
+  leftTitle: string;
+  leftLinks: LinkItem[];
+  rightTitle: string;
+  rightLinks: LinkItem[];
+}
+
+const { leftTitle, leftLinks, rightTitle, rightLinks } = Astro.props;
+---
+
+<section class="links-module">
+  <div class="links-grid">
+    <div class="links-col">
+      <h3 class="links-head">{leftTitle}</h3>
+      <ul class="links-list">
+        {leftLinks.map(link => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener">
+              <span class="link-label">{link.label}</span>
+              <span class="link-url">{link.href}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="links-col">
+      <h3 class="links-head">{rightTitle}</h3>
+      <ul class="links-list">
+        {rightLinks.map(link => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener">
+              <span class="link-label">{link.label}</span>
+              <span class="link-url">{link.href}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
