@@ -1,4 +1,6 @@
 ---
+import Kicker from './Kicker.astro';
+
 interface LinkItem {
   label: string;
   href: string;
@@ -6,16 +8,18 @@ interface LinkItem {
 }
 
 interface Props {
+  kicker?: string;
   leftTitle: string;
   leftLinks: LinkItem[];
   rightTitle: string;
   rightLinks: LinkItem[];
 }
 
-const { leftTitle, leftLinks, rightTitle, rightLinks } = Astro.props;
+const { kicker, leftTitle, leftLinks, rightTitle, rightLinks } = Astro.props;
 ---
 
 <section class="links-module">
+  {kicker && <Kicker text={kicker} />}
   <div class="links-grid">
     <div class="links-col">
       <h3 class="links-head">{leftTitle}</h3>

@@ -1194,6 +1194,10 @@ a { color: inherit; }
   margin-top: 96px;
 }
 
+.links-module > .kick {
+  margin-bottom: 30px;
+}
+
 .links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
